@@ -33,17 +33,14 @@ var FormAbandonmentTracker = {
   onFieldChange: function(event) {
     let field_id = event.target.id;
     this.addFieldToHistory(field_id);
-    console.log(field_id);
   },
   onFieldInput: function(event) {
     let field_id = event.target.id;
     this.addFieldToHistory(field_id);
-    console.log(field_id);
   },
   addFieldToHistory: function(field_id) {
     this.$formHistory.push(field_id);
     this.$formHistory = this.$formHistory.filter((v, i, a) => a.indexOf(v) === i).sort();
-    console.log(this.$formHistory);
   },
   onFormSubmit: function(event) {
 

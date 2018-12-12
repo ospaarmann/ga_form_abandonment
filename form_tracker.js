@@ -34,5 +34,7 @@ var FormTracker = {
   sendEvent: function() {
 
   },
+  clearFormHistory() {
+    this.$formHistory = [];
   }
 }

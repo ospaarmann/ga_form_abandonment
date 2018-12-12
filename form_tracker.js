@@ -17,10 +17,10 @@ var FormTracker = {
   },
   attachEvents: function() {
     let that = this;
-    document.querySelectorAll('select').forEach(function(el) {
+    this.$form.querySelectorAll('select').forEach(function(el) {
       el.addEventListener('change', function(e) { return that.onFieldChange(e); });
     });
-    document.querySelectorAll('input, textarea').forEach(function(el) {
+    this.$form.querySelectorAll('input, textarea').forEach(function(el) {
       el.addEventListener('input', function(e) { return that.onFieldInput(e); });
     });
     this.$form.addEventListener('submit', function(e) { return that.onFormSubmit(e) });

@@ -28,23 +28,27 @@ var FormTracker = {
     });
     this.$form.addEventListener('submit', function(e) { return that.onFormSubmit(e) });
   },
-  onFieldChange(event) {
-    let field = event.target;
-    let field_name = event.target.name;
-    console.log(field_name);
+  onFieldChange: function(event) {
+    let field_id = event.target.id;
+    this.addFieldToHistory(field_id);
+    console.log(field_id);
   },
-  onFieldInput(event) {
-    let field = event.target;
-    let field_name = event.target.name;
-    console.log(field_name);
+  onFieldInput: function(event) {
+    let field_id = event.target.id;
+    this.addFieldToHistory(field_id);
+    console.log(field_id);
   },
-  onFormSubmit(event) {
+  addFieldToHistory: function(field_id) {
+    this.$formHistory.push(field_id);
+    console.log(this.$formHistory);
+  },
+  onFormSubmit: function(event) {
     console.log("Form Submit");
   },
   sendEvent: function() {
 
   },
-  clearFormHistory() {
+  clearFormHistory: function() {
     this.$formHistory = [];
   }
 }

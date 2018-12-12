@@ -27,7 +27,8 @@ var FormAbandonmentTracker = {
     this.$form.querySelectorAll('input, textarea').forEach(function(el) {
       el.addEventListener('input', function(e) { return that.onFieldInput(e); });
     });
-    this.$form.addEventListener('submit', function(e) { return that.onFormSubmit(e) });
+    this.$form.addEventListener('submit', function(e) { return that.onFormSubmit() });
+    window.addEventListener('beforeunload', function(e) { return that.onFormAbandonment() } );
   },
   onFieldChange: function(event) {
     let field_id = event.target.id;

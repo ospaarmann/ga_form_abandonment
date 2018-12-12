@@ -45,7 +45,8 @@ var FormTracker = {
     console.log(this.$formHistory);
   },
   onFormSubmit: function(event) {
-    console.log("Form Submit");
+
+    this.clearFormHistory();
   },
   sendEvent: function() {
 

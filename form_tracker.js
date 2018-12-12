@@ -10,12 +10,13 @@ var FormTracker = {
 
     if(!gtag) {
       console.error("FormTracker Error: Please pass in your gtag object when initializing FormTracker.");
+      return;
     }
-    if(this.$form) {
-      this.attachEvents();
-    } else {
+    if(!this.$form) {
       console.error("FormTracker Error: Please specify the correct form id when initializing FormTracker.");
+      return;
     }
+    this.attachEvents();
   },
   attachEvents: function() {
     let that = this;

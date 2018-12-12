@@ -1,4 +1,4 @@
-var FormTracker = {
+var FormAbandonmentTracker = {
   init: function(gtag, form_id, event_category, event_action = 'FormAbandonment') {
     this.$gtag = gtag;
     this.$eventCategory = event_category ? event_category : form_id;

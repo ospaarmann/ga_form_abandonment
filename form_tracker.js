@@ -6,7 +6,14 @@ var FormTracker = {
     this.$formId = form_id;
     this.$form = document.getElementById(form_id);
 
-    this.attachEvents();
+    if(!gtag) {
+      console.error("FormTracker Error: Please pass in your gtag object when initializing FormTracker.");
+    }
+    if(this.$form) {
+      this.attachEvents();
+    } else {
+      console.error("FormTracker Error: Please specify the correct form id when initializing FormTracker.");
+    }
   },
   attachEvents: function() {
     let that = this;

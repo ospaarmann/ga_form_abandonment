@@ -17,7 +17,7 @@ This way you don't have to fire an event whenever a user touches a field but sti
 - Make sure you set the `transport_type` to `beacon`. See `example.html` and find more info [here](https://developers.google.com/analytics/devguides/collection/gtagjs/sending-data).
 - Include `form_abandonment_tracker.js` in the head of your page.
 - Initialize `FormAbandonmentTracker` by adding this snippet below your form and passing in the necessary parameters:
-  ```
+  ```javascript
   <script type="text/javascript">
     (function(){
       FormAbandonmentTracker.init(gtag, 'YOUR_FORM_ID', 'EVENT_CATEGORY', 'EVENT_ACTION');

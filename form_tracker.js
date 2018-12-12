@@ -42,12 +42,25 @@ var FormAbandonmentTracker = {
     this.$formHistory.push(field_id);
     this.$formHistory = this.$formHistory.filter((v, i, a) => a.indexOf(v) === i).sort();
   },
-  onFormSubmit: function(event) {
-
+  onFormSubmit: function() {
+    this.$formIsSubmitted = true;
     this.clearFormHistory();
   },
-  sendEvent: function() {
-
+  onFormAbandonment: function() {
+    if(!this.$formIsSubmitted) {
+      this.sendEvents();
+    }
+  },
+  sendEvents: function() {
+    let joined_history = this.$formHistory.join(', ');
+    // Send the data off to Google
+    this.$gtag('event', this.$eventAction, {
+      'event_category': this.$eventCategory,
+      'event_label': 'Fields with input: ' + joined_history,
+      'event_callback': function() {
+        console.log("Data sent to Google.");
+      }
+    });
   },
   clearFormHistory: function() {
     this.$formHistory = [];

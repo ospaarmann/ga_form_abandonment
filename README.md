@@ -7,7 +7,9 @@ This is a simple example to illustrate how to use the `beforeunload` in Javascri
 ## Idea
 An important part of understanding your users bevavior and improving conversion rates is to understand when they started to fill out a form but then closed the window or navigated somewhere else.
 
-This script tracks every field the user enters data in and before the window or tab is closed or the user leaves the page a summary is sent to Google Analytics as an event containing all fields the user touched.
+This script tracks every field the user enters data in. Before the window or tab is closed or the user leaves the page a summary is sent to Google Analytics as an event containing all fields the user touched.
+
+This way you don't have to fire an event whenever a user touches a field but still get a detailed report on what might have thrown the user off.
 
 ## Usage
 

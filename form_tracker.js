@@ -41,6 +41,7 @@ var FormTracker = {
   },
   addFieldToHistory: function(field_id) {
     this.$formHistory.push(field_id);
+    this.$formHistory = this.$formHistory.filter((v, i, a) => a.indexOf(v) === i);
     console.log(this.$formHistory);
   },
   onFormSubmit: function(event) {

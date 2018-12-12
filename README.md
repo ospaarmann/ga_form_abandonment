@@ -2,6 +2,8 @@
 
 This is a simple example to illustrate how to use the `beforeunload` in Javascript to track form abandonment with Google Analytics' Tag Manager (`gtag`).
 
+**Note: I am in no way affiliated with Google and do not offer official advice. This is just some code that might help some folks out there**
+
 ## Idea
 An important part of understanding your users bevavior and improving conversion rates is to understand when they started to fill out a form but then closed the window or navigated somewhere else.
 

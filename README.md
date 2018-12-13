@@ -1,4 +1,4 @@
-# Google Analytics Form Abandonment [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Tracking Google Analytics Form Abandonment with `beforeunload` [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This is a simple example to illustrate how to use the `beforeunload` in Javascript to track form abandonment with Google Analytics' Tag Manager (`gtag`).
 
